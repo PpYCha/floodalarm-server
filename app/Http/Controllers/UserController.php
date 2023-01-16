@@ -61,7 +61,7 @@ class UserController extends Controller
                 return response()->json(["status" => "failed", "success" => false, "message" => "Unable to login. Incorrect password."]);
             }
         } else {
-            return response()->json(["status" => "failed", "success" => false, "message" => "Unable to login. Email doesn't exist."]);
+            return response()->json(["status" => "failed", "success" => false, "message" => "Unable to login. Incorrect username or password."]);
         }
     }
 
