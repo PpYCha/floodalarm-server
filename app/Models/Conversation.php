@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Message extends Model
+class Conversation extends Model
 {
     use HasFactory;
-    protected $table = 'messages';
+    protected $table = 'conversations';
     protected $primaryKey = 'id';
 
-    public function userConversation()
+    public function userConversations()
     {
-        return $this->belongsTo(UserConversation::class);
+        return $this->hasMany(UserConversation::class);
     }
 }
