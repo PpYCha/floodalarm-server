@@ -8,11 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Message extends Model
 {
     use HasFactory;
-    protected $table = 'messages';
-    protected $primaryKey = 'id';
 
-    public function userConversation()
-    {
-        return $this->belongsTo(UserConversation::class);
-    }
+    protected $table = 'messages';
+    protected $fillable = [
+        '_id',
+        'text',
+        'userId',
+        'name',
+    ];
 }
